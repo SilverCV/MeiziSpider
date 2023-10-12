@@ -5,7 +5,8 @@ from bs4 import BeautifulSoup
 
 def getHtml(url,encoding='utf-8'):
     headers = {"user-agent":'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'}
-    try:        
+    try:
+
         r = requests.get(url,headers=headers)
         r.raise_for_status()
         r.encoding = encoding
